@@ -19,7 +19,7 @@ matrix:
 before_install:
  - sudo add-apt-repository ppa:ubuntu-lxc/daily -y
  - sudo apt-get update
- - sudo apt-get install -qq lxc lxc-dev uidmap busybox
+ - sudo apt-get install -qq lxc lxc-dev uidmap busybox build-essential pkg-config libcap-dev libseccomp-dev libselinux-dev libpam-dev
  - echo "${USER}:100000:65536" | sudo tee /etc/subuid
  - echo "${USER}:100000:65536" | sudo tee /etc/subgid
  - echo "${USER} veth lxcbr0 10" | sudo tee -a /etc/lxc/lxc-usernet
